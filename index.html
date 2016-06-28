@@ -1,0 +1,80 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<h1>טופס הרשמה לאתר</h1>
+	</head>
+	<body>
+
+		<h2>מלאו את הפרטים בשדות המסומנים</h2>
+
+		<form>
+			<br>
+			<label for="name"> שם: </label>
+			<br>
+			<input type="text" required value="" maxlength=”10”
+			placeholder="שם פרטי עד 10 אותיות"
+			/>
+			<br>
+			<br>
+			<div class="validation">
+				<label for="email">אי מייל </label>
+				<br>
+				<input type="email" id="email" placeholder="email" required />
+				<br>
+				<br>
+				<label for="password1">סיסמה :</label>
+				<br>
+				<input type="password" required id="password1" />
+				<br>
+				<br>
+				<label for="password2">אישור סיסמה :</label>
+				<br>
+				<input type="password"  required id="password2" />
+			</div>
+
+			<br>
+			<br>
+			<label for="age"> גיל:</label>
+			<br>
+			<input type="number" min="9" max="120"
+			step="1">
+			<input type="range" min="9" max="120"
+			step="1">
+			<br>
+			<br>
+			<label for="name"> שם: </label>
+			<br>
+			<input type="text"  maxlength=”30”
+			placeholder="שם פרטי עד 30 אותיות"
+			/>
+			<br>
+			<br>
+			<label for="mail">אי מייל </label>
+			<br>
+			<input type="email"  id="email2" maxlength="30" placeholder="email"/>
+			<br>
+			<br>
+			<div class="button">
+				<button type="submit">	שלח
+				</button>
+			</div>
+
+		</form>
+
+		<script>
+						:var email = document.getElementById("email");
+			email.addEventListener("keyup", function
+			(event) {
+			if(email.validity.typeMismatch) {
+			email.setCustomValidity(" נא להקיש כתובת דואר
+			;("אלקטרוני תקינה
+			} else {
+			email.setCustomValidity("");
+			}
+			});
+		</script>
+
+	</body>
+</html>
